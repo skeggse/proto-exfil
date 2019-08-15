@@ -1,6 +1,6 @@
 {
   "name": "proto-exfil",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool to attempt to exfiltrate an entire object given a getter.",
   "main": "dist/index.js",
   "module": "lib/index.js",
