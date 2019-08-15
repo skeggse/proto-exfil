@@ -2,14 +2,21 @@
   "name": "proto-exfil",
   "version": "1.0.0",
   "description": "A tool to attempt to exfiltrate an entire object given a getter.",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "module": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
+  "files": [
+    "dist",
+    "lib"
+  ],
   "scripts": {
+    "build": "babel lib/ -d dist/",
     "coverage": "jest --coverage",
     "lint": "eslint .",
+    "prepublishOnly": "npm run build",
     "test": "jest"
   },
   "repository": {
@@ -30,6 +37,7 @@
   },
   "homepage": "https://github.com/skeggse/proto-exfil#readme",
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-transform-modules-commonjs": "^7.5.0",
     "@mixmaxhq/prettier-config": "^1.0.0",
